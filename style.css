@@ -1,0 +1,124 @@
+*{
+    font-family: poppins, sans-serif;
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+            /* colors */
+    --body-color:#E4E9F7;
+    --white-color:#fff;
+    --primary-color:#ffc61f; 
+    --primary-color-light:#F6F5FF;
+    --text-color:#000;
+  
+          /*transition*/
+     --tran-03: all 0.2s ease;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem ;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center; 
+    background-color: var(--body-color);
+}
+
+.container{
+    display: flex;
+    background-color: var(--white-color);
+    padding: 1.2rem;
+    box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+    gap: 2rem ;
+}
+.container .box{
+    flex: 1;
+    /* order: 2; */
+}
+.container .box form{
+    display: flex;
+    flex-direction: column ;
+}
+.container form input{
+    margin-top: 1rem;
+    padding: 0.5rem 0 0.1rem;
+    border: none;
+    outline: none;
+}
+.container form input:not(:last-of-type){
+    border-bottom: 3px solid black;
+}
+
+.container textarea{
+    margin-top: 1rem;
+    border: none;
+    border-bottom: 3px solid black;
+    resize: none;
+    outline: none;
+}
+
+.container input[type="submit"]{
+    width: 5rem;
+    background-color: var(--text-color);
+    color: var(--body-color);
+    text-align: center;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.container .image{
+    flex: 1;
+    max-width: 30rem;
+    background-image: url("1.jpg");
+    /* order: 1; */
+}
+
+.container .image img{
+    width: 100%;
+}
+
+#animation{
+	display:none;
+}
+
+.spinner {
+  height: 30px;
+  width: 30px;
+  animation: rotate 0.8s infinite linear;
+  border: 8px solid var(--text-color);
+  border-right-color: transparent;
+  border-radius: 50%;
+  margin-left:auto;
+  margin-right:auto;
+}
+@keyframes rotate {
+  0%    { transform: rotate(0deg); }
+  100%  { transform: rotate(360deg); }
+}
+#feedback{
+	display:none;
+	padding:5px 20px;
+    background-color: var(--primary-color-light);
+}
+
+.success {
+	color: #4F8A10;
+	background-color: #88ffd1;
+	background-image:url('success.png');
+	background-repeat: no-repeat;
+}
+.error ,.success{
+	margin: 10px 0px;
+	padding:0px 20px 0px 50px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+    line-height: 50px;
+}
+.error {
+	color: #D8000C;
+	background-color: #FFBABA;
+	background-image: url('error.png');
+}
